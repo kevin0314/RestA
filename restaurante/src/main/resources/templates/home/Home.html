@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+
+<body>
+		<div class="container-fluid">
+			<div th:replace="plantilla/template :: sidebar"></div>
+			<div class="row">
+				<form class="principal" action="">
+
+<div class="stories" th:fragment="stories">
+					<div class="categoria">
+						<span>Menu Categorias</span>
+					</div>
+					<div class="content-card">
+						<div  class="card" data-target="#exampleModalCenter" th:each="cl:${ListarCategoria}">
+							  <a th:href="@{/filtrar/}+${cl.IdCategoria}"><img class="card-img-top img-card" th:src="@{'/images/' + ${cl.imagen}}"
+							 alt="Card image cap"  th:value="${cl.IdCategoria}" ></a>
+								<span class="card-title" th:text="${cl.nombre}" th:value="${cl.IdCategoria}"></span>
+							<div class="modal fade" id="exampleModalCenter" tabindex="-1"
+								role="dialog" aria-labelledby="exampleModalCenterTitle"
+								aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLongTitle">Modal
+												title</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">...</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save
+												changes</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+					<div class="contenedor-principal">
+
+						<div class="card card-order" th:each="cp:${ListarProd}">
+							 <a th:href="@{/listarProd/}+${cp.IdProductos}">
+							 <img class="card-img-top" th:src="@{'/images/' + ${cp.imagen}}" alt="Card image cap">
+							 </a>
+							<span class="card-title" th:text="${cp.nombre}" th:value="${cp.IdProductos}"></span>
+						</div>
+						
+						
+					</div>
+
+					<div class="stories" th:fragment="stories">
+						<div class="categoria">
+							<span>Ordenes Recientes</span>
+						</div>
+						<div class="content-card">
+							<div class="card">
+								<img class="card-img-top" src="/images/icons8-bebida.png" alt="Card image cap">
+							</div>
+		
+							<div class="card">
+								<img class="card-img-top" src="/images/icons8-cafe.png" alt="Card image cap">
+							</div>
+		
+							<div class="card">
+								<img class="card-img-top" src="/images/icons8-pizza.png" alt="Card image cap">
+							</div>
+		
+							<div class="card">
+								<img class="card-img-top" src="/images/icons8-hamburguesa.png" alt="Card image cap">
+							</div>
+							
+		
+					</div>
+					</div>
+					  
+				</form>
+				<div class="detalle-order">
+						<div class="container-fluid">
+							<span>Detalle de orden</span>
+							<div class="tabla">
+								<table class="table table-striped">
+									<thead>
+									  <tr>
+										<th scope="col">ID</th>
+										<th scope="col">Producto</th>
+										<th scope="col">Cantidad</th>
+										<th scope="col">Precio</th>
+										<th scope="col">Total</th>
+										
+									  </tr>
+									</thead>
+									<tbody>
+									<tr th:each="producto:${Listarpro}">
+									<td th:text="${producto.IdProductos}"></td>
+									<td th:text="${producto.nombre}" ></td>
+									<td><input type="number" placeholder="1" style="width:30px;height:20px"></td>
+									<td th:text="${producto.precio}"></td>
+									<td th:text="${producto.precio}">
+														<td>
+					<a th:href="@{/guardarOrden/}+${producto.IdProductos}" class="btn btn-success">Ordenar</a>
+					</td>
+									
+									</tr>
+									
+									</tbody>
+								  </table>
+							</div>
+						</div>
+						<hr>
+						<span >Sub Total: </span>
+						<br>
+						<button class="btn btn-danger">Ordenar ahora</button>
+						</div>
+			</div>
+		</div>
+
+	<footer th:replace="plantilla/template :: footer"></footer>
+	
+	<!-- jQuery - Slim version (=without AJAX) -->
+	<link rel="stylesheet" th:src="@{/js/jquery.js}">
+	<link rel="stylesheet" th:src="@{/js/jquery-3.3.1.slim.min.js}">
+	<link rel="stylesheet" th:src="@{/js/popper.min.js}">
+	<link rel="stylesheet" th:src="@{/js/bootstrap.min.js}">
+
+</body>
+
+</html>

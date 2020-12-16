@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head"></head>
+<meta charset="UTF-8">
+<title>Tipo Bebida</title>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div th:replace="plantilla/template :: sidebar"></div>
+		<div class="row">
+		<form th:action="@{/saveBebida}" th:object=${TipoBebida} method="POST" class="formularios">
+			<div class="forms">
+				<div class="card-header">
+				<h3>Registrar Bebida</h3>
+				</div>
+				<div class="card-body">
+				
+					<div class="form-group">
+
+						<input hidden th:field="*{IdTipoBebida}" type="hidden" class="form-control"/>
+
+						<input th:field="*{IdTipoBebida}" type="hidden" class="form-control"/>
+
+					</div>
+					
+					<div class="form-group col-md-6" >
+						<label>TIPO</label>
+						<input th:field="*{tipo}" type="text" class="form-control"/>
+					</div>
+
+					<div class="form-group col-md-6">
+						<input type="submit" value="Guardar" class="btn btn-info">
+					</div>
+					
+				</div>
+				
+			</div>
+		</form>
+		</div>
+	</div>
+
+</body>
+</html>

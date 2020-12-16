@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<head>
+</head>
+<body>
+	<div class="container mt-4">
+		<div class="col-sm-6">
+			<form th:action="@{/save}" method="POST" enctype="multipart/form-data">
+				<div class="card">
+					<div class="card-header">
+						<h3>Modulo Usuario</h3>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>ID</label> <input type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>NOMBRE</label> <input type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>USUARIO</label> <input type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>EMAIL</label> <input type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>PASS</label> <input type="password" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>IMAGEN</label> <input name="file" type="file"
+								class="form-control" />
+						</div>
+
+					</div>
+					<div class="card-footer">
+						<input type="submit" value="Guardar" class="btn btn-primary" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

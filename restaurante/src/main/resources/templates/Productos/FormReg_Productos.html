@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head"></head>
+<meta charset="UTF-8">
+<meta charset="utf-8" />
+<title>Productos</title>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div th:replace="plantilla/template :: sidebar"></div>
+		<div class="row">
+		<form th:action="@{/saveProducto}" modelAttribute="Producto" method="POST" class="formularios" enctype="multipart/form-data">
+			<div class="forms">
+				<div class="card-header">
+				<h3>Registrar Productos</h3>
+				</div>
+				<div class="card-body">
+				
+					
+					<div class="form-group col-md-6" >
+						<label>CATEGORIA</label>
+						<select name="IdCatFK">
+						<option>Seleccione</option>
+						<option th:each="C:${Listarcateg}" th:text="${C.nombre}" th:value="${C.IdCategoria}"> 
+						</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-6" >
+						<label>TIPO DE PLATILLO</label>
+						<select name="IdPlaFK">
+						<option>Seleccione</option>
+						<option th:each="P:${Listarplati}" th:text="${P.tipo}" th:value="${P.IdTipoPlatillo}"> 
+						</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-6" >
+						<label>TIPO DE BEBIDA</label>
+						<select name="IdBebFK">
+						<option>Seleccione</option>
+						<option th:each="B:${Listarbebi}" th:text="${B.tipo}" th:value="${B.IdTipoBebida}"> 
+						</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-6" >
+						<label>DESCRIPCION</label>
+						<input name="Descrip" type="text" class="form-control"/>
+					</div>
+
+					<div class="form-group col-md-6" >
+						<label>PRECIO</label>
+						<input name="prec" type="text" class="form-control"/>
+					</div>
+					
+					<div class="form-group col-md-6" >
+						<label>NOMBRE</label>
+						<input name="nom" type="text" class="form-control"/>
+					</div>
+					
+					<div class="form-group col-md-6" > 
+						<label>TAMANIO</label>
+						<input name="tama" type="text" class="form-control"/>
+					</div>
+					
+			           <div class="form-group col-md-6" >
+						<label>IMAGEN</label>
+						<input name="file" type="file" class="form-control"/>
+					</div>
+
+					<div class="form-group col-md-6">
+						<input type="submit" value="Guardar" class="btn btn-info">
+					</div>
+					
+				</div>
+				
+			</div>
+		</form>
+		</div>
+	</div>
+
+</body>
+</html>

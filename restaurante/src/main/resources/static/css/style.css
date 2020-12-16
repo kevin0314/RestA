@@ -1,0 +1,190 @@
+body{
+background: #ffffff;
+}
+
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+}
+
+.row{
+    width: 85%;
+    height:90vh;
+    padding-top: 30px;
+}
+.principal{
+    background:  #ffffff;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    align-items: center;
+
+}
+
+.carda .card-header{
+	align-items: center;
+	 display: flex;
+	 flex-direction: column;
+}
+
+.card-footer{
+	 align-items: center;
+	 display: flex;
+	 flex-direction: column;
+}
+
+.container .card-header{
+	 align-items: center;
+	 display: flex;
+	 flex-direction: column;
+}
+
+.regProductos{
+	 background:  #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    align-items: center;
+	
+}
+
+.carda{
+	  height: auto;
+    max-height: 8rem;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+    color:rgb(81, 95, 102);
+    text-decoration: solid;
+}
+
+.listaProducto{
+	 background:  #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    align-items: center;
+}
+
+.formularios{
+    background:  #ffffff;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.card-header{
+    font-size: 20pt;
+}
+
+.forms{
+    width: 80%;
+    height: 95%;
+    border:black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(240, 240, 240);
+    border-radius: 10px;
+}
+
+.stories{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stories span{
+    font-size: 16pt;
+}
+
+.stories .card:hover span{
+    font-size: 12pt;
+    transition: 0.5s;
+}
+.stories .content-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+
+}
+
+
+.card{
+    max-width: 7rem;
+    min-width: 6rem;
+    height: auto;
+    max-height: 8rem;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+    color:rgb(81, 95, 102);
+    text-decoration: solid;
+}
+
+.img-card{
+    width: 4rem;
+}
+
+.card:hover .img-card{
+    width: 5rem;
+    transition: 0.5s;
+}
+
+.contenedor-principal{
+    width: 80%;
+    height: 40%;
+    overflow-y: scroll;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-order{
+    max-width: 7rem;
+    min-width: 6rem;
+    height: 9rem;
+    border-radius: 10px;
+}
+
+.detalle-order{
+    background: #ffffff;
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.detalle-order .container-fluid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    width: auto;
+    padding-top: 30px;
+    
+}
+
+.detalle-order .container-fluid .tabla{
+    width: 100%;
+    overflow-y: auto;
+}
+
+.detalle-order .container-fluid span{
+    padding-bottom: 20px;
+    font-size: 14pt;
+}
+
+
+.footer{
+    background: rgb(74, 103, 133);
+    height: 70px;
+}

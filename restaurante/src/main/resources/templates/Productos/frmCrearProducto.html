@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+<meta charset="UTF-8">
+</head>
+<body>
+	<div class="container-fluid">
+		<div th:replace="plantilla/template :: sidebar"></div>
+		<div class="row">
+
+
+			<form class="regProductos" action="">
+				<div class="stories" th:fragment="stories">
+					<div class="container">
+						<div class="carda">
+							<div class="card-header bg-dark text-white">
+								<h3>Registro de Productos</h3>
+							</div>
+
+							<div class="card-body">
+							<hr>
+
+								<div class="col-md-10">
+									<label>Nombre:</label> <input type="text"
+										class="form-control" placeholder="Nombre del Producto">
+
+									<label>Descripcion:</label> <input type="text"
+										class="form-control" placeholder="Descripcion"> <label>Precio:</label>
+									<input type="text" class="form-control" placeholder="Precio">
+
+									<label>TamaÃ±o:</label> <input type="text" class="form-control"
+										placeholder="TamaÃ±o del Producto">
+								</div>
+
+
+								<div class="col-md-10">
+									<label>Imagen:</label> <input type="file" class="form-control"
+										placeholder="Imagen del Producto"> <label>Categoria:</label>
+									<select class="form-control form-control">
+										<option>Seleccione una categoria</option>
+
+									</select> <label>Tipo de Platillo:</label> <select
+										class="form-control form-control">
+										<option>Seleccione un platillo</option>
+
+									</select> <label>Tipo de Bebida:</label> <select
+										class="form-control form-control">
+										<option>Seleccione una bebida</option>
+
+									</select>
+
+								</div>
+								
+								
+
+
+
+
+							</div>
+							
+							<hr>
+							<br>
+							
+							<div class="card-footer bg-dark">
+			<input type="submit" class="btn btn-primary btn-sm-10" value="Guardar" />
+		</div>
+							
+						</div>
+					</div>
+				</div>
+		</div>
+
+		
+
+
+
+		</form>
+
+	</div>
+
+	</div>
+
+	<footer th:replace="plantilla/template :: footer"></footer>
+</body>
+</html>
